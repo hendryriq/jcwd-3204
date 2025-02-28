@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Modules</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div style="color: red;">
+        <p>ini tulisan berwarna merah</p>
+        <p style="color: green;">masih berwarna merah</p>
+    </div>
+    <div style="color: white;">
+        <div style="background-color: burlywood; text-align: left;">
+            <p>Tulisan ini mempunyai backround berwarna cokelat muda rata kiri</p>
+        </div>
+        <div style="background-color: burlywood; text-align: center;">
+            <p>Tulisan ini mempunyai backround berwarna cokelat muda rata tengah</p>
+        </div>
+        <div style="background-color: burlywood; text-align: right;">
+            <p>Tulisan ini mempunyai backround berwarna cokelat muda rata kanan</p>
+        </div>
+    </div>
+    <!-- Contoh internal styles -->
+    <div class="internal-content">
+        <p>Ini adalah contoh styling menggunakan css internal</p>
+        <p>semua elemen didalamnya, dibungkus menggunakan class internal-content</p>
+        <a href="https.://google.com">Google</a>
+        <button id="internal-button" class="internal-button">Test Button</button>
+    </div>
+    <!-- Contoh External CSS -->
+    <div class="external-content">
+        <p>Ini adalah contoh styling menggunakan external CSS</p>
+    </div>
+</body>
+
+<script>
+    document.getElementById("internal-button").addEventListener("click", function() {
+        alert("Button Clicked");
+    })
+</script>
+
+</html>

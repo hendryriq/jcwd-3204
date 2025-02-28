@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .random-btn{
+        position: absolute;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: tomato;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+</style>
+<body>
+    <h1 id="title" value="1">Hello World</h1>
+    <button onclick="changeText()">ClickMe</button>
+    <button class="random-btn" onclick="changePositionRandom()">Tangkap Aku</button>
+</body>
+<script>
+    let isDefault = true;
+    function changeText() {
+        if (isDefault) {
+            document.getElementById('title').innerHTML = 'Hello World';
+            isDefault = false
+        }else{
+            document.getElementById('title').innerHTML = 'Hello Universe';
+            isDefault = true;
+        }
+    }
+
+    function changePositionRandom() {
+        let randomX = Math.floor(Math.random() * window.innerWidth);
+        let randomY = Math.floor(Math.random() * window.innerHeight);
+        document.querySelector('.random-btn').style.left = randomX + 'px';
+        document.querySelector('.random-btn').style.top = randomY + 'px';
+    }
+</script>
+</html>

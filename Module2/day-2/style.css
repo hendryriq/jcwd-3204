@@ -1,0 +1,29 @@
+.static-position {
+  position: static;
+  left: 30px;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.relative-position {
+  position: relative;
+  left: 30px;
+  color: white;
+  background-color: lightcoral;
+  padding: 10px;
+}
+
+/* media query untuk tablet */
+@media (min-width: 768px) {
+  .relative-position {
+    background-color: green;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-box {
+    background-color: yellow;
+    width: 100%;
+  }
+}
